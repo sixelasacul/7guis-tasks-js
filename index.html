@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>7 GUIs tasks</h1>
+    <p>
+      Reference:
+      <a
+        href="https://eugenkiss.github.io/7guis/tasks"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        https://eugenkiss.github.io/7guis/tasks
+      </a>
+    </p>
+    <p>
+      HackerNews source:
+      <a
+        href="https://news.ycombinator.com/item?id=31273802"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        https://news.ycombinator.com/item?id=31273802
+      </a>
+    </p>
+    <p>
+      React implementation:
+      <a
+        href="https://codesandbox.io/s/7guis-tasks-react-b9dzt5"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        https://codesandbox.io/s/7guis-tasks-react-b9dzt5
+      </a>
+    </p>
+
+    <div>
+      <h2>1- Counter</h2>
+      <div id="counter">
+        <input id="counter-input" value="0" readonly />
+        <button id="counter-button">Count</button>
+      </div>
+      <h2>2- Temperature Converter</h2>
+      <div id="temperature">
+        <label>
+          <input id="temperature-celsius" />
+          Celsius
+        </label>
+        =
+        <label>
+          <input id="temperature-farenheit" />
+          Farenheit
+        </label>
+      </div>
+      <h2>3- Flight Booker</h2>
+      <div id="flight">
+        <select id="flight-type">
+          <option selected value="one-way">One-way flight</option>
+          <option value="return">Return flight</option>
+        </select>
+        <input type="date" id="flight-start" />
+        <input type="date" id="flight-end" disabled="" />
+        <button id="flight-book">Book</button>
+      </div>
+      <h2>4- Timer</h2>
+      <div id="timer">
+        <label>
+          Elapsed Time:
+          <progress id="timer-elapsed-progress" value="1" max="1" />
+        </div>
+        <p id="timer-elapsed-time">0.0s</p>
+        <label>
+          Duration:
+          <input type="range" id="timer-duration" value="0" max="100" />
+          <button id="timer-reset">Reset</button>
+        </div>
+      </div>
+      <h2>5- CRUD</h2>
+      <div id="crud">
+        <select size='5' id="crud-select">
+        </select>
+        <label>
+          Filter prefix:
+          <input id="crud-filter" />
+        </label>
+        <label>
+          Name:
+          <input id="crud-name" />
+        </label>
+        <label>
+          Surname:
+          <input id="crud-surname" />
+        </label>
+        <button id="crud-create" disabled>Create</button>
+        <button id="crud-update" disabled>Update</button>
+        <button id="crud-delete" disabled>Delete</button>
+      </div>
+      <h2>6- Circle Drawer</h2>
+      <div id="circle">
+        <div>
+          <button id="circle-undo" disabled>Undo</button>
+          <button id="circle-redo" disabled>Redo</button>
+        </div>
+        <canvas id="circle-drawer" width="800" height="200" style="border: 1px solid black"></canvas>
+        <div id="circle-adjuster-section" hidden>
+          <input id="circle-adjuster-slider" type="range" value="20" max="100" />
+          <button id="circle-adjuster-confirm">Ok</button>
+        </div>
+      </div>
+      <h2>7- Cells</h2>
+      <div id="cells"></div>
+    </div>
+
+    <script src="src/counter.js"></script>
+    <script src="src/temperature-converter.js"></script>
+    <script src="src/flight-booker.js"></script>
+    <script src="src/timer.js"></script>
+    <script src="src/crud.js"></script>
+    <script src="src/circle-drawer.js"></script>
+  </body>
+</html>
